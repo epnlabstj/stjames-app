@@ -307,7 +307,7 @@ function renderActiveStop(stopId) {
             <img src="${stop.image}" alt="${stop.title}" class="w-full h-full object-cover" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex flex-col items-center justify-center p-4 text-center\'><i class=\'fa-regular fa-image text-3xl text-slate-600 mb-2\'></i><span class=\'text-xs text-slate-400 font-medium\'>Ajoutez votre photo dans <b>${stop.image}</b></span></div>';"/>
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent pointer-events-none"></div>
             <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur px-2.5 py-1 rounded-full border ${isEvent ? 'border-blue-500/30 text-blue-300' : 'border-amber-500/30 text-amber-300'} text-[11px] font-bold flex items-center gap-1"><i class="fa-solid fa-calendar"></i> ${stop.subtitle}</div>
-            <div class="absolute bottom-3 left-3 right-3 pointer-events-none">
+            <div class="absolute bottom-3 left-3 right-3 pointer-events-none flex flex-col gap-1">
                 <span class="${isEvent ? 'text-blue-400' : 'text-amber-400'} font-bold text-xs uppercase tracking-wider">${stop.subtitle}</span>
                 <h2 class="font-medieval text-lg sm:text-2xl font-bold text-white leading-tight">${stop.title}</h2>
             </div>
