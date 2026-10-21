@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Saint-James - Application Événements & Patrimoine</title>
+    
+    <!-- PWA meta tags -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Saint-James">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        normand: {
+                            red: '#C8102E',
+                            gold: '#D4AF37',
+                            goldlight: '#F3E5AB',
+                            slate: '#1E293B',
+                            parchment: '#FDFBF7',
+                            stone: '#E2E8F0',
+                            bronze: '#8C6239'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Cinzel', 'Georgia', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; -webkit-tap-highlight-color: transparent; }
+        .font-medieval { font-family: 'Cinzel', serif; }
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+    </style>
+</head>
+<body class="h-full flex flex-col bg-slate-950 text-slate-100 overflow-x-hidden">
+
+    <!-- Install PWA Banner -->
+    <div id="installBanner" class="hidden bg-gradient-to-r from-amber-600 to-amber-500 text-slate-950 px-4 py-2 flex items-center justify-between text-xs font-bold shadow-lg z-50">
+        <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-mobile-screen-button text-base"></i>
+            <span>Installer l'application Saint-James sur votre écran d'accueil</span>
+        </div>
+        <button onclick="installPWA()" class="px-3 py-1 bg-slate-950 text-amber-300 rounded-lg font-bold text-xs hover:bg-slate-900 transition">Installer</button>
+    </div>
+
+    <header class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur border-b border-amber-500/20 px-4 py-3 flex items-center justify-between shadow-lg">
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-600 to-yellow-400 p-0.5 shadow-md flex items-center justify-center">
+                <div class="w-full h-full bg-slate-900 rounded-[10px] flex items-center justify-center">
+                    <span class="font-medieval text-amber-400 text-xl">👑</span>
+                </div>
+            </div>
+            <div>
+                <h1 class="font-medieval text-base font-bold text-amber-300 leading-tight tracking-wide">Saint-James</h1>
+                <p class="text-xs text-slate-400 font-medium">Application Mobiles & Événements</p>
+            </div>
+        </div>
+        <div class="flex items-center space-x-2">
+            <button onclick="togglePassModal()" class="relative p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-amber-400 border border-amber-500/30 transition flex items-center gap-1.5 px-3">
+                <i class="fa-solid fa-shield-halved text-base"></i>
+                <span class="text-xs font-bold hidden sm:inline">Pass du Chevalier</span>
+                <span id="badgeCountBadge" class="w-5 h-5 bg-amber-500 text-slate-950 font-bold text-[10px] rounded-full flex items-center justify-center border-2 border-slate-900">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Circuit Selector Bar -->
+    <div class="bg-slate-900 border-b border-slate-800 px-4 py-2 flex items-center justify-center gap-2 z-30">
+        <span class="text-xs text-slate-400 font-medium mr-1">Circuit :</span>
+        <button id="btnCircuitEvent" onclick="switchCircuit('evenementiel')" class="px-3 py-1.5 rounded-lg bg-blue-500 text-white font-bold text-xs transition shadow-md flex items-center gap-1.5">
+            <i class="fa-solid fa-calendar-star"></i> Programme Événements (11 Bleu)
+        </button>
+        <button id="btnCircuitHist" onclick="switchCircuit('historique')" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs transition flex items-center gap-1.5">
+            <i class="fa-solid fa-landmark text-amber-400"></i> Historique (15 Doré)
+        </button>
+    </div>
+
+    <main class="flex-1 flex flex-col pb-20 md:pb-0 md:flex-row overflow-hidden relative">
+        <section id="mapSection" class="w-full md:w-1/2 h-[40vh] md:h-full relative flex-shrink-0 border-b md:border-b-0 md:border-r border-amber-500/20">
+            <div id="map" class="w-full h-full z-10"></div>
+            <div class="absolute top-3 right-3 z-20 flex flex-col gap-2">
+                <button onclick="locateUser()" class="p-3 bg-slate-900/90 hover:bg-slate-800 text-amber-400 border border-amber-500/30 rounded-xl shadow-xl transition backdrop-blur" title="Ma position GPS"><i class="fa-solid fa-location-crosshairs text-lg"></i></button>
+                <button onclick="simulateUserGPS()" class="p-3 bg-slate-900/90 hover:bg-slate-800 text-sky-400 border border-sky-500/30 rounded-xl shadow-xl transition backdrop-blur" title="Simuler ma position (Test)"><i class="fa-solid fa-vial text-lg"></i></button>
+                <button onclick="resetMapView()" class="p-3 bg-slate-900/90 hover:bg-slate-800 text-slate-300 border border-slate-700 rounded-xl shadow-xl transition backdrop-blur" title="Vue globale"><i class="fa-solid fa-compress text-lg"></i></button>
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 z-20 bg-slate-900/90 border border-amber-500/30 p-2.5 rounded-xl shadow-2xl backdrop-blur flex items-center justify-between text-xs">
+                <div class="flex items-center gap-2 text-slate-300" id="gpsStatusText">
+                    <i class="fa-solid fa-satellite-dish text-sky-400 text-sm animate-pulse"></i>
+                    <span><strong>GPS Actif :</strong> En recherche de position...</span>
+                </div>
+            </div>
+        </section>
+        <section class="w-full md:w-1/2 flex-1 flex flex-col bg-slate-950 overflow-y-auto relative">
+            <div id="stopDetailView" class="p-4 md:p-6 space-y-5 flex-1">
+                <div class="flex items-center justify-center p-12 text-slate-400 text-sm">
+                    <i class="fa-solid fa-spinner fa-spin mr-2"></i> Chargement du programme...
+                </div>
+            </div>
+            <div id="qrModal" class="hidden fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md flex flex-col items-center justify-center p-4">
+                <div class="w-full max-w-md bg-slate-900 border border-amber-500/30 rounded-2xl overflow-hidden shadow-2xl flex flex-col">
+                    <div class="p-4 border-b border-slate-800 flex items-center justify-between">
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-solid fa-qrcode text-amber-400"></i>
+                            <h3 class="font-medieval text-slate-100 font-bold">Scannez le QR Code de l'événement</h3>
+                        </div>
+                        <button onclick="closeQRModal()" class="text-slate-400 hover:text-white p-1"><i class="fa-solid fa-xmark text-xl"></i></button>
+                    </div>
+                    <div class="p-4 flex flex-col items-center">
+                        <div id="qr-reader" class="w-full rounded-xl overflow-hidden bg-black min-h-[220px]"></div>
+                        <div class="mt-4 w-full pt-3 border-t border-slate-800 text-center">
+                            <p class="text-xs text-slate-400 mb-2">Sélection directe rapide pour essai :</p>
+                            <div class="flex flex-wrap justify-center gap-1.5 max-h-32 overflow-y-auto">
+                                <button onclick="simulateQRScan('EVENT-STOP-1')" class="px-2 py-1 bg-blue-900/50 hover:bg-blue-500/20 border border-blue-700 rounded text-[11px] text-blue-300">1. Marché Nocturne</button>
+                                <button onclick="simulateQRScan('EVENT-STOP-6')" class="px-2 py-1 bg-blue-900/50 hover:bg-blue-500/20 border border-blue-700 rounded text-[11px] text-blue-300">6. RDV Artistes & Feu</button>
+                                <button onclick="simulateQRScan('EVENT-STOP-11')" class="px-2 py-1 bg-blue-900/50 hover:bg-blue-500/20 border border-blue-700 rounded text-[11px] text-blue-300">11. Foire St-Macé</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="passModal" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
+                <div class="w-full max-w-lg bg-slate-900 border border-amber-500/40 rounded-2xl p-5 shadow-2xl flex flex-col max-h-[85vh]">
+                    <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-solid fa-shield-halved text-amber-400 text-xl"></i>
+                            <h3 class="font-medieval text-amber-300 font-bold text-lg">Le Pass du Chevalier de Saint-James</h3>
+                        </div>
+                        <button onclick="togglePassModal()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
+                    </div>
+                    <div class="py-4 overflow-y-auto space-y-4 flex-1">
+                        <div class="p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 text-xs text-amber-200">
+                            <i class="fa-solid fa-circle-info mr-1"></i>
+                            <span>Débloquez tous les blasons événementiels et historiques !</span>
+                        </div>
+                        <div id="badgesGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
+                    </div>
+                    <div class="pt-3 border-t border-slate-800 flex justify-end">
+                        <button onclick="togglePassModal()" class="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold rounded-xl text-xs transition">Fermer</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <nav class="fixed bottom-0 left-0 right-0 z-40 bg-slate-900/95 border-t border-amber-500/20 backdrop-blur flex justify-around p-2 md:hidden">
+        <button onclick="switchView('map')" class="flex flex-col items-center py-1 px-3 text-amber-400 font-medium text-[11px]"><i class="fa-solid fa-map-marked-alt text-lg mb-0.5"></i><span>Carte</span></button>
+        <button onclick="openQRModal()" class="flex flex-col items-center py-1 px-3 text-slate-300 hover:text-amber-300 font-medium text-[11px] relative -mt-5">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-amber-500 to-yellow-300 text-slate-950 flex items-center justify-center shadow-lg border-2 border-slate-900"><i class="fa-solid fa-qrcode text-xl"></i></div>
+            <span class="mt-1">Scanner</span>
+        </button>
+        <button onclick="switchView('stops')" class="flex flex-col items-center py-1 px-3 text-slate-300 hover:text-amber-300 font-medium text-[11px]"><i class="fa-solid fa-list-ol text-lg mb-0.5"></i><span>Événements</span></button>
+    </nav>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,797 @@
+{
+    "circuit_principal": [
+        {
+            "id": 0,
+            "qrCode": "STJAMES-STOP-0",
+            "lat": 48.523437,
+            "lng": -1.321588,
+            "title": "0. Château Place Calvaire",
+            "subtitle": "Château et Place Calvaire",
+            "image": "photos/stop_0.jpg",
+            "audioFile": "audio/stop_0.mp3",
+            "audioText": "Bienvenue au Château et sur la Place Calvaire, point de départ de notre découverte des remparts et de l'histoire de Saint-James.",
+            "quiz": {
+                "question": "Sur quelle place se situe le Château de cette étape ?",
+                "options": [
+                    {
+                        "text": "Place Calvaire",
+                        "correct": true
+                    },
+                    {
+                        "text": "Place de l'Église",
+                        "correct": false
+                    },
+                    {
+                        "text": "Place des Douves",
+                        "correct": false
+                    }
+                ],
+                "badgeName": "Châtelain du Calvaire",
+                "badgeIcon": "🏰"
+            }
+        },
+        {
+            "id": 1,
+            "qrCode": "STJAMES-STOP-1",
+            "lat": 48.522901,
+            "lng": -1.320703,
+            "title": "1. Stèle Guillaume le Conquérant",
+            "subtitle": "Sur les pas du Duc de Normandie",
+            "image": "photos/stop_1.jpg",
+            "audioFile": "audio/stop_1.mp3",
+            "audioText": "Cette stèle commémore le passage et l'importance de Guillaume le Conquérant dans l'histoire de la fondation et de la fortification de la place forte de Saint-James.",
+            "quiz": {
+                "question": "Que commémore cette stèle à Saint-James ?",
+                "options": [
+                    {
+                        "text": "Guillaume le Conquérant",
+                        "correct": true
+                    },
+                    {
+                        "text": "Un traité de paix royal",
+                        "correct": false
+                    },
+                    {
+                        "text": "La découverte d'une source",
+                        "correct": false
+                    }
+                ],
+                "badgeName": "Compagnon du Conquérant",
+                "badgeIcon": "👑"
+            }
+        },
+        {
+            "id": 2,
+            "qrCode": "STJAMES-STOP-2",
+            "lat": 48.522879,
+            "lng": -1.319511,
+            "title": "2. Place des Douves",
+            "subtitle": "Les anciennes protections de la cité",
+            "image": "photos/stop_2.jpg",
+            "audioFile": "audio/stop_2.mp3",
+            "audioText": "La Place des Douves rappelle l'emplacement des fossés et douves qui protégeaient autrefois les remparts de la ville des assauts extérieurs.",
+            "quiz": {
+                "question": "Quel rôle jouaient les douves autour de la place forte ?",
+                "options": [
+                    {
+                        "text": "Protéger la ville des assauts extérieurs",
+                        "correct": true
+                    },
+                    {
+                        "text": "Servir de marché aux puces",
+                        "correct": false
+                    },
+                    {
+                        "text": "Accueillir les joutes nautiques",
+                        "correct": false
+                    }
+                ],
+                "badgeName": "Gardien des Douves",
+                "badgeIcon": "🛡️"
+            }
+        },
+        {
+            "id": 3,
+            "qrCode": "STJAMES-STOP-3",
+            "lat": 48.523613,
+            "lng": -1.320353,
+            "title": "3. Place de l'Église",
+            "subtitle": "Cœur spirituel de la cité",
+            "image": "photos/stop_3.jpg",
+            "audioFile": "audio/stop_3.mp3",
+            "audioText": "La Place de l'Église constitue le cœur historique et religieux de Saint-James, témoin de la vie paroissiale au fil des siècles.",
+            "quiz": {
+                "question": "Que représente la Place de l'Église dans la cité ?",
+                "options": [
+                    {
+                        "text": "Le cœur historique et religieux",
+                        "correct": true
+                    },
+                    {
+                        "text": "Le quartier militaire principal",
+                        "correct": false
+                    },
+                    {
+                        "text": "L'ancienne zone portuaire",
+                        "correct": false
+                    }
+                ],
+                "badgeName": "Fidèle de la Place",
+                "badgeIcon": "⛪"
+            }
+        },
+        {
+            "id": 4,
+            "qrCode": "STJAMES-STOP-4",
+            "lat": 48.524267,
+            "lng": -1.322575,
+            "title": "4. Chemin de Ronde",
+            "subtitle": "Sur les traces des sentinelles",
+            "image": "photos/stop_4.jpg",
+            "audioFile": "audio/stop_4.mp3",
+            "audioText": "Le chemin de ronde permettait aux gardes de circuler rapidement le long des fortifications pour surveiller les abords de la cité.",
+            "quiz": {
+                "question": "Qui empruntait principalement le chemin de ronde ?",
+                "options": [
+                    {
+                        "text": "Les gardes et sentinelles",
+                        "correct": true
+                    },
+                    {
+                        "text": "Les marchands de vin",
+                        "correct": false
+                    },
+                    {
+                        "text": "Les pèlerins en route",
+                        "correct": false
+                    }
+                ],
+                "badgeName": "Sentinelle des Remparts",
+                "badgeIcon": "🏹"
+            }
+        },
+        {
+            "id": 5,
+            "qrCode": "STJAMES-STOP-5",
+            "lat": 48.524244,
+            "lng": -1.320243,
+            "title": "5. Rue Pendante",
+            "subtitle": "Une artère escarpée de la vieille ville",
+            "image": "photos/stop_5.jpg",
+            "audioFile": "audio/stop_5.mp3",
+            "audioText": "La Rue Pendante tire son nom de sa pente abrupte qui relie différentes strates de la ville historique.",
+            "quiz": {
+                "question": "Pourquoi la Rue Pendante porte-t-elle ce nom ?",
+                "options": [
+                    {
+                        "text": "En raison de sa pente abrupte",
+                        "correct": true
+                    },
+                    {
+                        "text": "À cause des ponts suspendus",
+                        "correct": false
+                    },
+                    {
+                        "text": "Pour honorer un seigneur pendu",
+                        "correct": false
+                    }
+                ],
+                "badgeName": "Marcheur des Pentes",
+                "badgeIcon": "🧗"
+            }
+        },
+        {
+            "id": 6,
+            "qrCode": "STJAMES-STOP-6",
+            "lat": 48.524868,
+            "lng": -1.320276,
+            "title": "6. Rue Cardin ou de St Hilaire",
+            "subtitle": "L'ancienne route commerçante",
+            "image": "photos/stop_6.jpg",
+            "audioFile": "audio/stop_6.mp3",
+            "audioText": "Cette rue historique menait vers Saint-Hilaire et accueillait de nombreuses activités liées au travail de la laine et au commerce.",
+            "quiz": {
+                "question": "Vers quelle direction majeure menait cette rue historique ?",
+                "options": [
+                    {
+                        "text": "Saint-Hilaire",
+                        "correct": true
+                    },
+                    {
+                        "text": "Le Mont-Saint-Michel",
+                        "correct": false
+                    },
+                    {
+                        "text": "Granville",
+                        "correct": false
+                    }
+                ],
+                "badgeName": "Voyageur des Voies",
+                "badgeIcon": "🗺️"
+            }
+        },
+        {
+            "id": 7,
+            "qrCode": "STJAMES-STOP-7",
+            "lat": 48.524193,
+            "lng": -1.31559,
+            "title": "7. Porte du Maire",
+            "subtitle": "Un accès fortifié emblématique",
+            "image": "photos/stop_7.jpg",
+            "audioFile": "audio/stop_7.mp3",
+            "audioText": "La Porte du Maire était l'un des points de passage contrôlés pour entrer dans l'enceinte fortifiée de Saint-James.",
+            "quiz": {
+                "question": "Quel était le rôle de la Porte du Maire ?",
+                "options": [
+                    {
+                        "text": "Contrôler l'entrée dans l'enceinte fortifiée",
+                        "correct": true
+                    },
+                    {
+                        "text": "Être la résidence du maire",
+                        "correct": false
+                    },
+                    {
+                        "text": "Servir de prison municipale",
+                        "correct": false
+                    }
+                ],
+                "badgeName": "Portier de la Cité",
+                "badgeIcon": "🔑"
+            }
+        },
+        {
+            "id": 8,
+            "qrCode": "STJAMES-STOP-8",
+            "lat": 48.524172,
+            "lng": -1.321503,
+            "title": "8. Chemin Ronde Pont",
+            "subtitle": "Jonction des fortifications",
+            "image": "photos/stop_8.jpg",
+            "audioFile": "audio/stop_8.mp3",
+            "audioText": "Ce point de jonction du chemin de ronde permettait de relier différentes sections stratégiques des remparts.",
+            "quiz": {
+                "question": "Que permettait cette section du chemin de ronde ?",
+                "options": [
+                    {
+                        "text": "Relier différentes sections des remparts",
+                        "correct": true
+                    },
+                    {
+                        "text": "Traverser la rivière en bateau",
+                        "correct": false
+                    },
+                    {
+                        "text": "Accéder aux souterrains secrets",
+                        "correct": false
+                    }
+                ],
+                "badgeName": "Éclaireur du Pont",
+                "badgeIcon": "🌉"
+            }
+        },
+        {
+            "id": 9,
+            "qrCode": "STJAMES-STOP-9",
+            "lat": 48.524354,
+            "lng": -1.322978,
+            "title": "9. Tour de la Redoute",
+            "subtitle": "La sentinelle du nord",
+            "image": "photos/stop_9.jpg",
+            "audioFile": "audio/stop_9.mp3",
+            "audioText": "La tour de la redoute est positionnée vers le nord pour donner l'alarme en cas d'attaque de l'envahisseur.",
+            "quiz": {
+                "question": "Pourquoi appelait-on cette tour la redoute ?",
+                "options": [
+                    {
+                        "text": "Pour donner l'alarme en cas d'attaque",
+                        "correct": true
+                    },
+                    {
+                        "text": "Car elle était peinte en rouge",
+                        "correct": false
+                    },
+                    {
+                        "text": "Parce qu'elle était interdite d'accès",
+                        "correct": false
+                    }
+                ],
+                "badgeName": "Guetteur de la Redoute",
+                "badgeIcon": "🛡️"
+            }
+        },
+        {
+            "id": 10,
+            "qrCode": "STJAMES-STOP-10",
+            "lat": 48.52412,
+            "lng": -1.323318,
+            "title": "10. Porte d'Avranches",
+            "subtitle": "L'ouverture vers le nord-ouest",
+            "image": "photos/stop_10.jpg",
+            "audioFile": "audio/stop_10.mp3",
+            "audioText": "La Porte d'Avranches ouvrait la route aux voyageurs et marchands se dirigeant vers Avranches et le littoral.",
+            "quiz": {
+                "question": "Vers quelle ville majeure cette porte ouvrait-elle la route ?",
+                "options": [
+                    {
+                        "text": "Avranches",
+                        "correct": true
+                    },
+                    {
+                        "text": "Fougères",
+                        "correct": false
+                    },
+                    {
+                        "text": "Rennes",
+                        "correct": false
+                    }
+                ],
+                "badgeName": "Voyageur d'Avranches",
+                "badgeIcon": "🚪"
+            }
+        },
+        {
+            "id": 11,
+            "qrCode": "STJAMES-STOP-11",
+            "lat": 48.522805,
+            "lng": -1.322452,
+            "title": "11. Porte de Fougères",
+            "subtitle": "L'axe sud des remparts",
+            "image": "photos/stop_11.jpg",
+            "audioFile": "audio/stop_11.mp3",
+            "audioText": "La Porte de Fougères contrôlait les échanges et passages vers le sud et la Bretagne voisine.",
+            "quiz": {
+                "question": "Quelle direction principale protégeait la Porte de Fougères ?",
+                "options": [
+                    {
+                        "text": "Le sud vers Fougères",
+                        "correct": true
+                    },
+                    {
+                        "text": "Le nord vers la mer",
+                        "correct": false
+                    },
+                    {
+                        "text": "L'est forestier",
+                        "correct": false
+                    }
+                ],
+                "badgeName": "Gardien de Fougères",
+                "badgeIcon": "🌿"
+            }
+        },
+        {
+            "id": 12,
+            "qrCode": "STJAMES-STOP-12",
+            "lat": 48.523678,
+            "lng": -1.32283,
+            "title": "12. Église Saint-Martin",
+            "subtitle": "Ancien édifice central de la cité",
+            "image": "photos/stop_12.jpg",
+            "audioFile": "audio/stop_12.mp3",
+            "audioText": "L'église Saint-Martin du Bellay, aujourd'hui disparue dans sa structure d'origine, occupait une place centrale dans la vie religieuse de Saint-James.",
+            "quiz": {
+                "question": "Quel était le nom complet de cette église historique ?",
+                "options": [
+                    {
+                        "text": "Saint-Martin du Bellay",
+                        "correct": true
+                    },
+                    {
+                        "text": "Saint-Martin de Tours",
+                        "correct": false
+                    },
+                    {
+                        "text": "Saint-Martin des Champs",
+                        "correct": false
+                    }
+                ],
+                "badgeName": "Erudit de Saint-Martin",
+                "badgeIcon": "🏛️"
+            }
+        },
+        {
+            "id": 13,
+            "qrCode": "STJAMES-STOP-13",
+            "lat": 48.527487,
+            "lng": -1.326668,
+            "title": "13. Porte Saint-Martin Cimetière",
+            "subtitle": "Aux abords de l'ancien cimetière",
+            "image": "photos/stop_13.jpg",
+            "audioFile": "audio/stop_13.mp3",
+            "audioText": "Ce secteur marque l'emplacement de la porte Saint-Martin et de l'ancien cimetière périphérique de la communauté.",
+            "quiz": {
+                "question": "Qu'y avait-il historiquement à proximité de cette porte extérieure ?",
+                "options": [
+                    {
+                        "text": "Un ancien cimetière",
+                        "correct": true
+                    },
+                    {
+                        "text": "Un grand marché aux chevaux",
+                        "correct": false
+                    },
+                    {
+                        "text": "Le port fluvial de la ville",
+                        "correct": false
+                    }
+                ],
+                "badgeName": "Mémoire du Cimetière",
+                "badgeIcon": "⚰️"
+            }
+        },
+        {
+            "id": 14,
+            "qrCode": "STJAMES-STOP-14",
+            "lat": 48.537178,
+            "lng": -1.328926,
+            "title": "14. Église Saint-Benoît",
+            "subtitle": "Patrimoine de Saint-Benoît-de-Beuvron",
+            "image": "photos/stop_14.jpg",
+            "audioFile": "audio/stop_14.mp3",
+            "audioText": "Située à Saint-Benoît-de-Beuvron, cette église témoigne de la richesse architecturale de la vallée avec son exposition du 25 juin au 18 juillet.",
+            "quiz": {
+                "question": "Quelles sont les dates de l'exposition spéciale à l'église Saint-Benoît ?",
+                "options": [
+                    {
+                        "text": "Du 25 juin au 18 juillet",
+                        "correct": true
+                    },
+                    {
+                        "text": "Du 1er juillet au 31 août",
+                        "correct": false
+                    },
+                    {
+                        "text": "Du 15 mai au 30 juin",
+                        "correct": false
+                    }
+                ],
+                "badgeName": "Veilleur de Beuvron",
+                "badgeIcon": "⛪"
+            }
+        }
+    ],
+    "circuit_evenementiel": [
+        {
+            "id": 201,
+            "qrCode": "EVENT-STOP-1",
+            "lat": 48.5235,
+            "lng": -1.321,
+            "title": "1. Inauguration Marché Nocturne & Pierre en Lumière",
+            "subtitle": "Du 20 au 22 mai",
+            "image": "photos/event_1.jpg",
+            "audioFile": "audio/event_1.mp3",
+            "audioText": "Inauguration du Marché Nocturne et Pierre en Lumière. Au programme : déambulation, atelier de lanternes, spectacle de feu, béhourd, exposition des lanternes, ancêtre Canisy.",
+            "organisateur": "Pierre et Patrimoine ; bénévoles ; artistes des spectacles et de la déambulation",
+            "quiz": {
+                "question": "Quel spectacle impressionnant est proposé lors de Pierre en Lumière ?",
+                "options": [
+                    {
+                        "text": "Spectacle de feu et béhourd",
+                        "correct": true
+                    },
+                    {
+                        "text": "Course de chevaux",
+                        "correct": false
+                    },
+                    {
+                        "text": "Opéra lyrique",
+                        "correct": false
+                    }
+                ],
+                "badgeName": "Lumière du Conquérant",
+                "badgeIcon": "🔥"
+            }
+        },
+        {
+            "id": 202,
+            "qrCode": "EVENT-STOP-2",
+            "lat": 48.524267,
+            "lng": -1.322575,
+            "title": "2. Festival Rempart : Exposition Photo Plein Air",
+            "subtitle": "Du 1er juin au 1er novembre",
+            "image": "photos/event_2.jpg",
+            "audioFile": "audio/event_2.mp3",
+            "audioText": "Festival Rempart : grande exposition de plein air de photos le long des remparts historiques de Saint-James.",
+            "organisateur": "Association CAMSM",
+            "quiz": {
+                "question": "Où a lieu l'exposition photo plein air du Festival Rempart ?",
+                "options": [
+                    {
+                        "text": "Le long des remparts",
+                        "correct": true
+                    },
+                    {
+                        "text": "Dans la mairie",
+                        "correct": false
+                    },
+                    {
+                        "text": "Dans le gymnase",
+                        "correct": false
+                    }
+                ],
+                "badgeName": "Photographe des Remparts",
+                "badgeIcon": "📷"
+            }
+        },
+        {
+            "id": 203,
+            "qrCode": "EVENT-STOP-3",
+            "lat": 48.5251,
+            "lng": -1.3218,
+            "title": "3. Concert Espace le Conquérant",
+            "subtitle": "Du 18 au 20 juin",
+            "image": "photos/event_3.jpg",
+            "audioFile": "audio/event_3.mp3",
+            "audioText": "Grands concerts musicaux à l'Espace le Conquérant pour célébrer le début de la saison estivale.",
+            "organisateur": "Commune nouvelle",
+            "quiz": {
+                "question": "Où se déroule ce concert musical festif ?",
+                "options": [
+                    {
+                        "text": "Espace le Conquérant",
+                        "correct": true
+                    },
+                    {
+                        "text": "Place du marché",
+                        "correct": false
+                    },
+                    {
+                        "text": "Parc de la mairie",
+                        "correct": false
+                    }
+                ],
+                "badgeName": "Mélomane de Saint-James",
+                "badgeIcon": "🎵"
+            }
+        },
+        {
+            "id": 204,
+            "qrCode": "EVENT-STOP-4",
+            "lat": 48.537178,
+            "lng": -1.328926,
+            "title": "4. Exposition Guillaume le Conquérant & Maquette",
+            "subtitle": "Du 25 juin au 18 juillet",
+            "image": "photos/event_4.jpg",
+            "audioFile": "audio/event_4.mp3",
+            "audioText": "Exposition sur la période de Guillaume le Conquérant et présentation de la maquette du château. Conférences à l'Espace culturel de Saint-Benoît, Exposition de la réplique du château par l'EPN.",
+            "organisateur": "Comité des fêtes",
+            "quiz": {
+                "question": "Quelle maquette exceptionnelle est présentée lors de cette exposition ?",
+                "options": [
+                    {
+                        "text": "La réplique du château",
+                        "correct": true
+                    },
+                    {
+                        "text": "Le Mont-Saint-Michel",
+                        "correct": false
+                    },
+                    {
+                        "text": "La cathédrale de Rouen",
+                        "correct": false
+                    }
+                ],
+                "badgeName": "Bâtisseur du Château",
+                "badgeIcon": "🏰"
+            }
+        },
+        {
+            "id": 205,
+            "qrCode": "EVENT-STOP-5",
+            "lat": 48.502,
+            "lng": -1.315,
+            "title": "5. Fête Communale d'Argouges",
+            "subtitle": "3 et 4 juillet",
+            "image": "photos/event_5.jpg",
+            "audioFile": "audio/event_5.mp3",
+            "audioText": "Grande fête communale d'Argouges avec animations populaires, restauration et convivativité pour toute la famille.",
+            "organisateur": "Paul Lebey ; bénévoles ; Commune nouvelle ; UCIA Restaurateurs de Saint-James",
+            "quiz": {
+                "question": "Dans quel village associé se déroule cette fête communale début juillet ?",
+                "options": [
+                    {
+                        "text": "Argouges",
+                        "correct": true
+                    },
+                    {
+                        "text": "Carnet",
+                        "correct": false
+                    },
+                    {
+                        "text": "Vergoncey",
+                        "correct": false
+                    }
+                ],
+                "badgeName": "Convive d'Argouges",
+                "badgeIcon": "🌾"
+            }
+        },
+        {
+            "id": 206,
+            "qrCode": "EVENT-STOP-6",
+            "lat": 48.5238,
+            "lng": -1.3212,
+            "title": "6. Week-end du RDV des Artistes & Feux d'artifice",
+            "subtitle": "10 et 11 juillet",
+            "image": "photos/event_6.jpg",
+            "audioFile": "audio/event_6.mp3",
+            "audioText": "Week-end du RDV des artistes : Démonstrations sur bois, fabrication de bourses en cuir, atelier lanternes, et feux d'artifice spectaculaires.",
+            "organisateur": "Paul Lebey ; bénévoles ; Commune nouvelle ; UCIA Restaurateurs de Saint-James",
+            "quiz": {
+                "question": "Quels ateliers artisanaux sont proposés durant ce week-end ?",
+                "options": [
+                    {
+                        "text": "Démonstration sur bois & bourses en cuir",
+                        "correct": true
+                    },
+                    {
+                        "text": "Poterie et céramique",
+                        "correct": false
+                    },
+                    {
+                        "text": "Tissage de la soie",
+                        "correct": false
+                    }
+                ],
+                "badgeName": "Artisan d'Art",
+                "badgeIcon": "🎨"
+            }
+        },
+        {
+            "id": 207,
+            "qrCode": "EVENT-STOP-7",
+            "lat": 48.523437,
+            "lng": -1.321588,
+            "title": "7. Grand Banquet, Concert & Soirée DJ",
+            "subtitle": "Soirée du 10 juillet",
+            "image": "photos/event_7.jpg",
+            "audioFile": "audio/event_7.mp3",
+            "audioText": "Soirée festive du RDV des artistes : Grand banquet avec repas convivial, concert live et soirée animée par un DJ.",
+            "organisateur": "Comité des fêtes",
+            "quiz": {
+                "question": "Que comprend la soirée festive du 10 juillet ?",
+                "options": [
+                    {
+                        "text": "Grand banquet, concert et soirée DJ",
+                        "correct": true
+                    },
+                    {
+                        "text": "Un marathon nocturne",
+                        "correct": false
+                    },
+                    {
+                        "text": "Un tournoi de belote",
+                        "correct": false
+                    }
+                ],
+                "badgeName": "Banqueteur Festif",
+                "badgeIcon": "🍷"
+            }
+        },
+        {
+            "id": 208,
+            "qrCode": "EVENT-STOP-8",
+            "lat": 48.51,
+            "lng": -1.335,
+            "title": "8. Fête de Carnet",
+            "subtitle": "24 et 25 juillet",
+            "image": "photos/event_8.jpg",
+            "audioFile": "audio/event_8.mp3",
+            "audioText": "Traditionnelle Fête de Carnet : animations locales, jeux champêtres et repas festif dans le village de Carnet.",
+            "organisateur": "Comité des fêtes",
+            "quiz": {
+                "question": "Dans quelle commune déléguée se déroule la fête des 24 et 25 juillet ?",
+                "options": [
+                    {
+                        "text": "Carnet",
+                        "correct": true
+                    },
+                    {
+                        "text": "Montjoie-Saint-Martin",
+                        "correct": false
+                    },
+                    {
+                        "text": "Saint-Aubin-de-Terregatte",
+                        "correct": false
+                    }
+                ],
+                "badgeName": "Joyeux de Carnet",
+                "badgeIcon": "🌻"
+            }
+        },
+        {
+            "id": 209,
+            "qrCode": "EVENT-STOP-9",
+            "lat": 48.545,
+            "lng": -1.38,
+            "title": "9. Fête de La Croix-Avranchin",
+            "subtitle": "21 et 22 août",
+            "image": "photos/event_9.jpg",
+            "audioFile": "audio/event_9.mp3",
+            "audioText": "Fête patrimoniale et conviviale de La Croix-Avranchin organisée en fin d'été.",
+            "organisateur": "Pierre et Patrimoine ; Comité des fêtes",
+            "quiz": {
+                "question": "Quel village est à l'honneur pour la fête des 21 et 22 août ?",
+                "options": [
+                    {
+                        "text": "La Croix-Avranchin",
+                        "correct": true
+                    },
+                    {
+                        "text": "Vessey",
+                        "correct": false
+                    },
+                    {
+                        "text": "Pontorson",
+                        "correct": false
+                    }
+                ],
+                "badgeName": "Pèlerin de la Croix",
+                "badgeIcon": "✝️"
+            }
+        },
+        {
+            "id": 210,
+            "qrCode": "EVENT-STOP-10",
+            "lat": 48.524,
+            "lng": -1.322,
+            "title": "10. Promenades, Chasse au Trésor & Cinéma Plein Air",
+            "subtitle": "Période estivale",
+            "image": "photos/event_10.jpg",
+            "audioFile": "audio/event_10.mp3",
+            "audioText": "Pendant toute la période estivale : Promenade sur les pas de Guillaume proposée par Pierre et Patrimoine, grande chasse au trésor et projection de film en plein air.",
+            "organisateur": "Commune nouvelle ; Pierre et Patrimoine ; Chimères et Singulières",
+            "quiz": {
+                "question": "Quelle activité ludique est proposée aux familles tout l'été ?",
+                "options": [
+                    {
+                        "text": "Chasse au trésor & film en plein air",
+                        "correct": true
+                    },
+                    {
+                        "text": "Escape game sous-marin",
+                        "correct": false
+                    },
+                    {
+                        "text": "Vol en montgolfière",
+                        "correct": false
+                    }
+                ],
+                "badgeName": "Chasseur de Trésor",
+                "badgeIcon": "🗺️"
+            }
+        },
+        {
+            "id": 211,
+            "qrCode": "EVENT-STOP-11",
+            "lat": 48.523437,
+            "lng": -1.321588,
+            "title": "11. Foire Saint-Macé & Village Médiéval",
+            "subtitle": "Foire Saint-Macé",
+            "image": "photos/event_11.jpg",
+            "audioFile": "audio/event_11.mp3",
+            "audioText": "Grande Foire Saint-Macé : Village médiéval sur la Place du Calvaire, spectacle équestre, démonstrations diverses et toujours des balades dans les remparts.",
+            "organisateur": "Commune nouvelle ; Pierre et Patrimoine ; Chimères et Singulières",
+            "quiz": {
+                "question": "Où s'installe le village médiéval de la Foire Saint-Macé ?",
+                "options": [
+                    {
+                        "text": "Sur la Place du Calvaire",
+                        "correct": true
+                    },
+                    {
+                        "text": "Dans la forêt de Villecartier",
+                        "correct": false
+                    },
+                    {
+                        "text": "Sur le parking du supermarché",
+                        "correct": false
+                    }
+                ],
+                "badgeName": "Seigneur de Saint-Macé",
+                "badgeIcon": "⚔️"
+            }
+        }
+    ]
+}
