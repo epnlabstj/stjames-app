@@ -303,12 +303,20 @@ function renderActiveStop(stopId) {
             <button onclick="navigateStop(1)" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs flex items-center gap-1">Suivant <i class="fa-solid fa-chevron-right"></i></button>
         </div>
 
-        <div class="relative rounded-2xl overflow-hidden border ${isEvent ? 'border-blue-500/30' : 'border-amber-500/30'} bg-slate-900 shadow-2xl h-56 sm:h-64 flex items-center justify-center">
-            <img src="${stop.image}" alt="${stop.title}" class="w-full h-full object-cover" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex flex-col items-center justify-center p-4 text-center\'><i class=\'fa-regular fa-image text-3xl text-slate-600 mb-2\'></i><span class=\'text-xs text-slate-400 font-medium\'>Ajoutez votre photo dans <b>${stop.image}</b></span></div>';"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none"></div>
-            <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur px-2.5 py-1 rounded-full border ${isEvent ? 'border-blue-500/30 text-blue-300' : 'border-amber-500/30 text-amber-300'} text-[11px] font-bold flex items-center gap-1"><i class="fa-solid fa-calendar"></i> ${stop.subtitle}</div>
-            <div class="absolute bottom-3 left-3 right-3 pointer-events-none">
-                <h2 class="font-medieval text-lg sm:text-2xl font-bold text-white leading-tight">${stop.title}</h2>
+        <!-- CARTE CARTE DETAIL CORRIGEE -->
+        <div class="relative rounded-2xl overflow-hidden border ${isEvent ? 'border-blue-500/30' : 'border-amber-500/30'} bg-slate-900 shadow-2xl min-h-[14rem] flex flex-col justify-between p-4">
+            <img src="${stop.image}" alt="${stop.title}" class="absolute inset-0 w-full h-full object-cover z-0" onerror="this.style.display='none';"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-slate-950/30 z-10 pointer-events-none"></div>
+
+            <div class="relative z-20 self-start">
+                <span class="inline-flex items-center gap-1.5 bg-slate-900/90 backdrop-blur px-3 py-1.5 rounded-full border ${isEvent ? 'border-blue-500/40 text-blue-300' : 'border-amber-500/40 text-amber-300'} text-xs font-bold shadow-md">
+                    <i class="fa-solid fa-calendar-days"></i> ${stop.subtitle}
+                </span>
+            </div>
+
+            <div class="relative z-20 mt-8 pointer-events-none">
+                <span class="${isEvent ? 'text-blue-400' : 'text-amber-400'} font-bold text-xs uppercase tracking-wider block mb-1">${stop.subtitle}</span>
+                <h2 class="font-medieval text-lg sm:text-2xl font-bold text-white leading-snug">${stop.title}</h2>
             </div>
         </div>
 
