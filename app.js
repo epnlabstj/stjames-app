@@ -347,7 +347,7 @@ function renderActiveStop(stopId) {
 
         <div class="bg-slate-900/60 rounded-2xl border border-slate-800 p-4 text-slate-300 text-xs sm:text-sm leading-relaxed space-y-2">
             <div class="flex items-center justify-between ${isEvent ? 'text-blue-400' : 'text-amber-400'} font-semibold text-xs border-b border-slate-800 pb-2">
-                <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-info"></i> Programme Détaillé</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-info"></i> Résumé Audio </span>
             </div>
             <p class="pt-1">${stop.audioText}</p>
         </div>
