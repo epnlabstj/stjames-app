@@ -63,8 +63,8 @@
         {
             "id": 2,
             "qrCode": "STJAMES-STOP-2",
-            "lat": 48.522879,
-            "lng": -1.319511,
+           "lat": 48.523786578917075,
+            "lng": -1.324939833297769,
             "title": "2. Place des Douves",
             "subtitle": "Les anciennes protections de la cité",
             "image": "photos/stop_2.jpg",
